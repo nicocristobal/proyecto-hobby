@@ -3,7 +3,7 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          <h2 class="text-center">Registro de Usuario </h2>
+          <h2 class="text-center">Registro de Usuario</h2>
         </div>
         <div class="card-body">
           <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
@@ -14,9 +14,12 @@
             <div class="form-group">
               <label for="password">Contraseña</label>
               <input type="password" id="password" class="form-control" formControlName="password" placeholder="Ingrese su contraseña" required>
-            </div> <br>
+            </div>
+            <br>
             <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
           </form>
+          <hr> <!-- Línea horizontal para separar el formulario del botón de Google -->
+          <button class="btn btn-danger btn-block" (click)="registerWithGoogle()">Registrarse con Google</button>
         </div>
       </div>
     </div>
